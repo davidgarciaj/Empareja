@@ -135,4 +135,18 @@ public class Emparejador
              }
        }
     }
+    
+    /**
+     * Muestra el ultimo integrante del grupo
+     */
+    public void ultimoDelGrupo(String codigo){
+        System.out.println("El último integrante del grupo " + codigo + " es:");
+        String ultimoAlum = "";
+       for(Alumno alum: alumnos){
+             if(alum.getGrupo().equals(codigo)){
+                  ultimoAlum = alum. getApellido1() + " " + alum.getApellido2() + ", " + alum.getNombre();
+             }
+       }
+        System.out.println(ultimoAlum);
+    }
 }
